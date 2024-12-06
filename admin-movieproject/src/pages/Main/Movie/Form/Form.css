@@ -1,0 +1,232 @@
+/* General Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4e6d0;
+  color: #3e2723;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Header Styling */
+.h1 {
+  text-align: center;
+  color: #6f4e37;
+  font-weight: bold;
+  padding: 15px;
+  background-color: rgba(210, 180, 140, 0.5);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Search Container */
+.search-container {
+  background-color: rgba(210, 180, 140, 0.3);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #8b4513;
+  border-radius: 6px;
+  background-color: #f5deb3;
+  color: #3e2723;
+  transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+  outline: none;
+  border-color: #a0522d;
+  box-shadow: 0 0 5px rgba(160, 82, 45, 0.5);
+}
+
+.search-container button {
+  background-color: #6f4e37;
+  color: #fff5e6;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #8b4513;
+}
+
+.searched-movie {
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.searched-movie p {
+  background-color: rgba(210, 180, 140, 0.5);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.searched-movie p:hover {
+  background-color: rgba(210, 180, 140, 0.7);
+}
+
+/* Container for Form */
+.container {
+  background-color: rgba(210, 180, 140, 0.3);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.poster-image {
+  max-width: 300px;
+  align-self: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #8b4513;
+  border-radius: 6px;
+  background-color: #f5deb3;
+  color: #3e2723;
+  transition: all 0.3s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #a0522d;
+  box-shadow: 0 0 5px rgba(160, 82, 45, 0.5);
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+form > button {
+  align-self: center;
+  background-color: #6f4e37;
+  color: #fff5e6;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+form > button:hover {
+  background-color: #8b4513;
+}
+
+/* Navigation Tabs */
+.tabs {
+  display: flex;
+  justify-content:  center;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.tabs li {
+  background-color: #8b4513;
+  color: #fff5e6;
+  padding: 10px 15px;
+  margin: 0 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tabs li:hover {
+  background-color: #6f4e37;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4e6d0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8b4513;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6f4e37;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-container {
+    padding: 10px;
+  }
+
+  .search-container input {
+    width: 60%;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .poster-image {
+    max-width: 200px;
+  }
+
+  form {
+    margin-top: 10px;
+  }
+
+  .tabs li {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+/* Large screen adjustments (like TVs or wide displays) */
+@media (min-width: 1200px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .search-container {
+    width: 50%;
+  }
+}
